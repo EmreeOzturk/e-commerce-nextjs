@@ -1,11 +1,10 @@
-import NextAuth from 'next-auth';
-import { NextAuthOptions } from 'next-auth';
+import NextAuth, { NextAuthOptions } from 'next-auth';
 import { MongoDBAdapter } from '@auth/mongodb-adapter';
-import clientPromise from '@/lib/db/mongoAdapter';
+import mongoClientPromise from '@/lib/db/mongoAdapter';
 import GoogleProvider from 'next-auth/providers/google';
 import GithubProvider from 'next-auth/providers/github';
 const handler: NextAuthOptions = NextAuth({
-  // adapter: MongoDBAdapter(clientPromise),
+  // adapter: MongoDBAdapter(mongoClientPromise),
   providers: [
     GithubProvider({
       clientId: process.env.GITHUB_CLIENT_ID!,
@@ -26,4 +25,3 @@ const handler: NextAuthOptions = NextAuth({
 });
 
 export { handler as GET, handler as POST };
-

@@ -53,7 +53,7 @@ const HeaderRightSide: React.FC<HeaderRightSideProps> = ({
                         <Tooltip key={index} fz={12} label={item.label} position="bottom" withArrow openDelay={500} >
                             <ActionIcon w={"auto"} variant='transparent' aria-label={item.label}>
                                 {item.icon}
-                            </ActionIcon>
+                            </ActionIcon>   
                         </Tooltip>
                     )
                 })

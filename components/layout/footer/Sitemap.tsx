@@ -11,7 +11,7 @@ const Sitemap = () => {
                 <Text fz={14} component='a' href='/'>Social Responsibility</Text>
             </Stack>
             <Stack align='start' gap={3}>
-                <Title order={3}>HELP & SUPPORT</Title>
+                <Title order={3} fz={"md"}> HELP & SUPPORT</Title>
                 <Text fz={14} component='a' href='/'>Shipping Info</Text>
                 <Text fz={14} component='a' href='/'>Returns</Text>
                 <Text fz={14} component='a' href='/'>How To Order</Text>
@@ -19,7 +19,7 @@ const Sitemap = () => {
                 <Text fz={14} component='a' href='/'>Size Guide</Text>
             </Stack>
             <Stack align='start' gap={3}>
-                <Title order={3}>CUSTOMER SERVICE</Title>
+                <Title order={3} fz={"md"}>CUSTOMER SERVICE</Title>
                 <Text fz={14} component='a' href='/'>Customer Service</Text>
                 <Text fz={14} component='a' href='/'>Terms and Conditions</Text>
                 <Text fz={14} component='a' href='/'>Consumers</Text>

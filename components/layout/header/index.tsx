@@ -33,6 +33,8 @@ const Header = () => {
                     </Grid.Col>
                     <Grid.Col span={"auto"} visibleFrom='md' >
                         <Logo />
+                        {session && "Welcome " + session?.user?.name}
+                        {!session && "Welcome Guest"}
                     </Grid.Col>
                     <Grid.Col span={3.5} >
                         <HeaderRightSide

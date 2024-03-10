@@ -3,7 +3,7 @@ import { paymentMethods } from '@/consts'
 const AcceptedPayments = () => {
     return (
         <Stack gap={7}>
-            <Title order={5}>
+            <Title order={5} fz={"md"}>
                 PAYMENT METHODS
             </Title>
             <Group>

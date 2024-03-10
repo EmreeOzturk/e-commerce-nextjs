@@ -22,16 +22,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ColorSchemeScript />
       </head>
       <body className={robotoSlab.className}>
-        <ReduxProvider>
-          <AuthProvider >
+        <AuthProvider >
+          <ReduxProvider>
             <AppMantineProvider
             >
               <AppLayout>
                 {children}
               </AppLayout>
             </AppMantineProvider>
-          </AuthProvider>
-        </ReduxProvider>
+          </ReduxProvider>
+        </AuthProvider>
       </body>
     </html>
   );

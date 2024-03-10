@@ -8,6 +8,10 @@ declare global {
     promise: Promise<Mongoose> | null;
     conn: Mongoose | null;
   };
+
+  var mongoClientPromise: {
+    _mongoClientPromise: Promise<MongoClient>;
+  };
 }
 
 export type HeaderRightMenu = {
@@ -26,5 +30,3 @@ export type PaymentMethod = {
   icon: React.ReactNode;
   brandColor: string;
 };
-
-

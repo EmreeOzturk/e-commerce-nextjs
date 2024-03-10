@@ -4,7 +4,13 @@ import React from 'react'
 
 const Links = () => {
     return (
-        <Group>
+        <Group  fz={
+            {
+                base: "sm",
+                md: "xs",
+                lg: "sm"
+            }
+        }>
             <Link href="/">Privacy Center</Link>
             <Link href="/">Privacy & Cookie Policy</Link>
             <Link href="/">Manage Cookies</Link>
