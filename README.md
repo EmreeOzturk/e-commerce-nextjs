@@ -2,6 +2,13 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+
+#TODOS 
+
+- [ ] Flagleri selectbox şeklinde yap
+- [ ] Signup page'i yap
+- [ ] Login page'i yap
+
 First, run the development server:
 
 ```bash
