@@ -1,7 +1,6 @@
 import React from 'react'
 import { Group, Stack, BackgroundImage } from '@mantine/core'
 import Link from 'next/link'
-import Image from 'next/image'
 import Logo from '@/components/common/logo'
 const SignupPage = () => {
     return (
