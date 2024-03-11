@@ -3,6 +3,7 @@ import { Session } from 'next-auth'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import { signOut } from 'next-auth/react';
 
 type AccountDropdownProps = {
     showAccountDropdown: boolean
@@ -35,7 +36,7 @@ const AccountDropdown: React.FC<AccountDropdownProps> = ({
                                     <Text>
                                         {sessionData?.user?.name}
                                     </Text>
-                                    <Text component='a' href='/'>Sign Out</Text>
+                                    <Button onClick={() => signOut()}  >Sign Out</Button>
                                 </Stack>
                             </Group>
                             <Stack mt={15} gap={15} w="100%">

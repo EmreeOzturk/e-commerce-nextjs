@@ -6,7 +6,6 @@ import { IconSearch } from '@tabler/icons-react';
 import ReactCountryFlag from 'react-country-flag';
 import { headerRightMenu } from "@/consts"
 import { useAppSelector } from '@/hooks/useAppSelector';
-import { getIPData } from '@/app/actions';
 import Image from 'next/image'
 import { HeaderRightSideProps } from '@/prop-types';
 
@@ -23,7 +22,6 @@ const HeaderRightSide: React.FC<HeaderRightSideProps> = ({
     showAccountDropdown,
     sessionData
 }) => {
-    const ipData = getIPData();
     const isLoggedIn = !!sessionData
     return (
         <Group gap="lg" justify='center'>

@@ -1,10 +1,12 @@
 import NextAuth, { NextAuthOptions } from 'next-auth';
 import { MongoDBAdapter } from '@auth/mongodb-adapter';
-import mongoClientPromise from '@/lib/db/mongoAdapter';
+import clientPromise from '@/lib/db/mongoAdapter';
 import GoogleProvider from 'next-auth/providers/google';
 import GithubProvider from 'next-auth/providers/github';
+import type { Adapter } from 'next-auth/adapters';
+
 const handler: NextAuthOptions = NextAuth({
-  // adapter: MongoDBAdapter(mongoClientPromise),
+  adapter: MongoDBAdapter(clientPromise) as Adapter,
   providers: [
     GithubProvider({
       clientId: process.env.GITHUB_CLIENT_ID!,
@@ -15,9 +17,9 @@ const handler: NextAuthOptions = NextAuth({
       clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
     }),
   ],
-  //   pages: {
-  //     signIn: '/signin',
-  //   },
+  // pages: {
+  //   signIn: '/signin',
+  // },
   session: {
     strategy: 'jwt',
   },

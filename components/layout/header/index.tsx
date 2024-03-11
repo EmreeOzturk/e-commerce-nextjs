@@ -15,7 +15,7 @@ const Header = () => {
     const { data: session } = useSession();
     return (
         <>
-            <AdBanner />
+            {/* <AdBanner /> */}
             <Burger opened={opened} onClick={toggle} hiddenFrom="md" size="sm" />
             {showAccountDropdown &&
                 <AccountDropdown
