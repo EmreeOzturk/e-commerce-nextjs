@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Logo from '@/components/common/logo'
 const SignupPage = () => {
     return (
-        <Group gap="0" h="100dvh">
+        <Group gap="0" h="90dvh">
             <Stack align='center' h="100%" w="55%">
                 <Group p={20} justify='space-around' w="100%" >
                     <Logo />
@@ -23,11 +23,11 @@ const SignupPage = () => {
                     <p>Enter your personal details</p>
                 </Stack>
             </Stack>
-            <Stack align='center' h="100%" w="45%" bg={"blue"}>
+            {/* <Stack align='center' h="100%" w="45%" bg={"blue"}>
                 <BackgroundImage h="100%" bgp={"center"} bgsz={"contain"} src='/assets/sign-up-bg.jpg'>
                     <h1>Sign up</h1>
                 </BackgroundImage>
-            </Stack>
+            </Stack> */}
         </Group>
     )
 }

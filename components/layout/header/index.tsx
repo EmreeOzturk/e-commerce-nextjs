@@ -8,7 +8,7 @@ import HeaderLeftSide from './HeaderLeftSide';
 import { MobileMenu } from './MobileMenu';
 import AccountDropdown from './AccountDropdown';
 import { useState } from 'react';
-import { useSession } from 'next-auth/react';
+import { useSession, signIn, signOut } from 'next-auth/react';
 const Header = () => {
     const [opened, { toggle }] = useDisclosure();
     const [showAccountDropdown, setShowAccountDropdown] = useState(false);
@@ -17,24 +17,13 @@ const Header = () => {
         <>
             {/* <AdBanner /> */}
             <Burger opened={opened} onClick={toggle} hiddenFrom="md" size="sm" />
-            {showAccountDropdown &&
-                <AccountDropdown
-                    showAccountDropdown={showAccountDropdown}
-                    setShowAccountDropdown={setShowAccountDropdown}
-                    sessionData={session}
-                />}
             <Group pos={"relative"} align='center' px={0} h={100}>
-                <Stack hiddenFrom='md' >
-                    asdasdasdas
-                </Stack>
                 <Grid grow w="100%" align='center' justify='center'>
                     <Grid.Col span={4} visibleFrom='md' >
                         <HeaderLeftSide />
                     </Grid.Col>
                     <Grid.Col span={"auto"} visibleFrom='md' >
                         <Logo />
-                        {session && "Welcome " + session?.user?.name}
-                        {!session && "Welcome Guest"}
                     </Grid.Col>
                     <Grid.Col span={3.5} >
                         <HeaderRightSide

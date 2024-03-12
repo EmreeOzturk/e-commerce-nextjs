@@ -3,6 +3,8 @@ import { MongoDBAdapter } from '@auth/mongodb-adapter';
 import clientPromise from '@/lib/db/mongoAdapter';
 import GoogleProvider from 'next-auth/providers/google';
 import GithubProvider from 'next-auth/providers/github';
+import Auth0Provider from 'next-auth/providers/auth0';
+import TwitterProvider from 'next-auth/providers/twitter';
 import type { Adapter } from 'next-auth/adapters';
 
 const handler: NextAuthOptions = NextAuth({
@@ -16,10 +18,19 @@ const handler: NextAuthOptions = NextAuth({
       clientId: process.env.GOOGLE_CLIENT_ID!,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
     }),
+    Auth0Provider({
+      clientId: process.env.AUTH0_CLIENT_ID!,
+      clientSecret: process.env.AUTH0_CLIENT_SECRET!,
+      issuer: process.env.AUTH0_ISSUER_BASE_URL!,
+    }),
+    TwitterProvider({
+      clientId: process.env.TWITTER_CLIENT_ID!,
+      clientSecret: process.env.TWITTER_CLIENT_SECRET!,
+    }),
   ],
-  // pages: {
-  //   signIn: '/signin',
-  // },
+  pages: {
+    signIn: '/login',
+  },
   session: {
     strategy: 'jwt',
   },

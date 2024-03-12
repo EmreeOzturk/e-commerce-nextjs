@@ -3,7 +3,7 @@ import { Session } from 'next-auth'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import { signOut } from 'next-auth/react';
+import { signOut ,signIn} from 'next-auth/react';
 
 type AccountDropdownProps = {
     showAccountDropdown: boolean
@@ -16,7 +16,7 @@ const AccountDropdown: React.FC<AccountDropdownProps> = ({
     sessionData
 }) => {
     return (
-        <Collapse py={15} transitionDuration={1000} in={showAccountDropdown} pos={"absolute"} top={"80%"} right={"20%"} w={"220px"}
+        <Collapse py={15} transitionDuration={300} transitionTimingFunction="linear" in={showAccountDropdown} pos={"absolute"} top={"80%"} right={"20%"} w={"220px"}
             translate='yes' onMouseLeave={() => setShowAccountDropdown(false)}
             style={{
                 boxShadow: "0px 0px 2px 0px rgba(40,40,40,0.35)",
@@ -63,10 +63,10 @@ const AccountDropdown: React.FC<AccountDropdownProps> = ({
                 ) :
                     (
                         <Stack align='center' justify='center' w={"100%"}>
-                            <Button component='a' href='/signup' w={"60%"} variant='filled' color='shoppi-secondary'>
+                            <Button onClick={() => signIn()} w={"50%"} fz={"sm"} variant='filled' color='shoppi-secondary'>
                                 Login
                             </Button>
-                            <Button w={"60%"} component='a' href='/signup' variant='outline' color='shoppi-secondary'>
+                            <Button w={"50%"} component='a' href='/signup' fz={"sm"} variant='outline' color='shoppi-secondary'>
                                 Sign Up
                             </Button>
                         </Stack>

@@ -1,22 +1,13 @@
 "use client"
-import React from 'react'
-import { Group, ActionIcon, Tooltip, Text, Indicator, rem } from '@mantine/core';
-import { Spotlight, SpotlightActionData, spotlight } from '@mantine/spotlight';
+import { Group, ActionIcon, Tooltip, Indicator, rem } from '@mantine/core';
+import { Spotlight, spotlight } from '@mantine/spotlight';
 import { IconSearch } from '@tabler/icons-react';
-import ReactCountryFlag from 'react-country-flag';
-import { headerRightMenu } from "@/consts"
-import { useAppSelector } from '@/hooks/useAppSelector';
+import { headerRightMenu, spotlightActionData } from "@/consts"
 import Image from 'next/image'
 import { HeaderRightSideProps } from '@/prop-types';
+import AccountDropdown from './AccountDropdown';
 
 
-const actions: SpotlightActionData[] = Array(3000)
-    .fill(0)
-    .map((_, index) => ({
-        id: `item-${index}`,
-        label: `Item ${index}`,
-        description: `Item ${index} description`,
-    }));
 const HeaderRightSide: React.FC<HeaderRightSideProps> = ({
     setShowAccountDropdown,
     showAccountDropdown,
@@ -51,12 +42,17 @@ const HeaderRightSide: React.FC<HeaderRightSideProps> = ({
                         <Tooltip key={index} fz={12} label={item.label} position="bottom" withArrow openDelay={500} >
                             <ActionIcon w={"auto"} variant='transparent' aria-label={item.label}>
                                 {item.icon}
-                            </ActionIcon>   
+                            </ActionIcon>
                         </Tooltip>
                     )
                 })
             }
-            <ReactCountryFlag countryCode="TR"
+            <AccountDropdown
+                showAccountDropdown={showAccountDropdown}
+                setShowAccountDropdown={setShowAccountDropdown}
+                sessionData={sessionData}
+            />
+            {/* <ReactCountryFlag countryCode="TR"
                 svg
                 cdnUrl="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.3/flags/1x1/"
                 cdnSuffix="svg"
@@ -65,9 +61,9 @@ const HeaderRightSide: React.FC<HeaderRightSideProps> = ({
                     height: '22px',
                     borderRadius: '50%',
                 }}
-                title="US" />
+                title="US" /> */}
             <Spotlight
-                actions={actions}
+                actions={spotlightActionData}
                 nothingFound="Nothing found..."
                 highlightQuery
                 limit={4}

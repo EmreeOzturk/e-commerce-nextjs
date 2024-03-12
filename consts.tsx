@@ -1,6 +1,7 @@
 import { IconUserCircle, IconShoppingBag, IconSearch, IconHeart, IconBrandVisa, IconBrandMastercard, IconBrandPaypal } from '@tabler/icons-react';
 import { HeaderRightMenu,PaymentMethod,SocialAccount } from './types';
 import { IconBrandFacebook, IconBrandInstagram, IconBrandTwitter, IconBrandYoutube, IconBrandPinterest, IconBrandSnapchat, IconBrandTiktok } from '@tabler/icons-react'
+import { SpotlightActionData } from '@mantine/spotlight';
 
 
 
@@ -79,3 +80,12 @@ export const paymentMethods:PaymentMethod[] = [
     brandColor: '#00acee'
   },
 ];
+
+
+export const spotlightActionData: SpotlightActionData[] = Array(3000)
+    .fill(0)
+    .map((_, index) => ({
+        id: `item-${index}`,
+        label: `Item ${index}`,
+        description: `Item ${index} description`,
+    }));
