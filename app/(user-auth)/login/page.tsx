@@ -1,3 +1,4 @@
+import LoginForm from '@/components/form/LoginForm'
 import { Group, Stack, Text, Title, TextInput, Button, Divider } from '@mantine/core'
 import { IconChevronLeft, IconMail, IconKey, IconArrowRight, IconBrandGithub, IconBrandTwitter, IconBrandGoogle, IconBrandAuth0 } from '@tabler/icons-react'
 import { getProviders } from "next-auth/react"
@@ -20,20 +21,7 @@ const LoginPage = async () => {
           <Text c="gray.5" fz={16}>
             Enter your personal details and start journey with us
           </Text>
-          <TextInput placeholder="Email" variant="filled" size='xl'
-            leftSection={<IconMail size={22} />}
-          />
-          <TextInput placeholder="Password" variant="filled" type="password" size='xl'
-            leftSection={<IconKey size={22} />}
-          />
-          <Button
-            variant="outline"
-            size='md'
-            color='shoppi-secondary'
-            rightSection={<IconArrowRight size={14} />}
-          >
-            Login
-          </Button>
+          <LoginForm />
           <Text fz="sm" td="underline" c="gray.6">
             Forgot your password?
           </Text>
