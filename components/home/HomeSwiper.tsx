@@ -1,9 +1,13 @@
 "use client"
 import { Carousel, CarouselSlide } from '@mantine/carousel';
+import Autoplay from 'embla-carousel-autoplay';
 import Image from 'next/image';
+import { useRef } from 'react';
 const HomeSwiper = () => {
+    const autoplay = useRef(Autoplay({ delay: 2000 }));
+
     return (
-        <Carousel withIndicators w="100%" h="330px" controlSize="40px" c="white"
+        <Carousel plugins={[autoplay.current]} loop withIndicators w="100%" h="100%" pos="relative" controlSize="40px" c="white"
             styles={{
                 control: {
                     backgroundColor: 'rgb(255, 255, 255)',
@@ -24,6 +28,7 @@ const HomeSwiper = () => {
                             src={`/home-swiper/${index + 1}.jpg`}
                             alt="Random Image"
                             fill
+
                         />
                     </CarouselSlide>
                 ))
