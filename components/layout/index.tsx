@@ -1,5 +1,5 @@
 "use client"
-import { AppShell } from '@mantine/core';
+import { AppShell, Container, rem } from '@mantine/core';
 import { usePathname } from 'next/navigation';
 import Header from './header';
 import Footer from './footer';
@@ -27,15 +27,14 @@ export default function AppLayout(
                     </AppShell.Header>
             }
             <AppShell.Main
-                style={{
-                    // minHeight: '100vh',
-                    marginTop: pathname === '/signup' ? 0 : '/login' ? 0 : 155,
-                }}
+                mt={80}
             >
-                {children}
+                <Container miw="90em" >
+                    {children}
+                </Container>
             </AppShell.Main>
             {
-                pathname === '/signup' ? null : '/login' ? null :
+                pathname === '/signup' || pathname === '/login' ? null :
                     <AppShell.Footer
                         style={{
                             position: 'relative',
