@@ -8,7 +8,7 @@ import TwitterProvider from 'next-auth/providers/twitter';
 import type { Adapter } from 'next-auth/adapters';
 
 const handler: NextAuthOptions = NextAuth({
-  adapter: MongoDBAdapter(clientPromise) as Adapter,
+  // adapter: MongoDBAdapter(clientPromise) as Adapter,
   providers: [
     GithubProvider({
       clientId: process.env.GITHUB_CLIENT_ID!,
