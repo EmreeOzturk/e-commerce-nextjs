@@ -13,25 +13,27 @@ const FlashSale = () => {
             w="100%"
             align="center"
             justify="center"
-            h="220px"
+            h="25vh"
+            style={{
+                borderRadius: '10px',
+                overflow: 'hidden',
+            }}
         >
             <Carousel
-                slideSize="45%"
+                slideSize="25%"
                 slideGap="5px"
                 plugins={[autoplay.current]}
                 loop
                 ml="auto"
-                w="60%"
-                h="220px"
-
+                w="100%"
                 pos="relative"
                 withControls={false}
                 align="start"
             >
                 {
                     offersArray.map((offer, index) => (
-                        <CarouselSlide key={index} pos="relative" h="220px">
-                            <Flex direction="column" pos="relative" h="220px"
+                        <CarouselSlide key={index} pos="relative" >
+                            <Flex direction="column" pos="relative" h="25vh"
                             >
                                 <Image
                                     style={{ borderRadius: "20px", padding: "5px" }}
@@ -56,7 +58,7 @@ const FlashSale = () => {
                                     bottom="15px"
                                     h="20px"
                                     w="140px"
-                                    left="30px"
+                                    left="80px"
                                     bg="yellow"
                                     c="white"
                                     align="center"

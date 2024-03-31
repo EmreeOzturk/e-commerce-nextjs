@@ -12,7 +12,15 @@
   height: 20px !important;
 }
 .flashSale {
-  background: url('/flash.webp');
+  /* background: url('/flash.webp'); */
   background-size: cover;
-  background-position: -230px -100px;
+  background-position: -400px -130px;
+}
+
+.section {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+.menu-item:hover {
+  background-color: #f8b090 !important;
 }

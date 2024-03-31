@@ -1,3 +1,21 @@
+import {
+  GiLargeDress,
+  GiClothes,
+  Gi3DHammer,
+  GiWatch,
+  GiBallerinaShoes,
+  GiHeadphones,
+  GiHealthCapsule,
+  GiSportMedal,
+  GiBigDiamondRing,
+} from 'react-icons/gi';
+import { MdOutlineSportsEsports, MdOutlineSmartToy } from 'react-icons/md';
+import { BiCameraMovie, BiGift, BiCategory } from 'react-icons/bi';
+import { FaBaby } from 'react-icons/fa';
+import { HiOutlineHome } from 'react-icons/hi';
+import { AiOutlineSecurityScan } from 'react-icons/ai';
+import { BsPhoneVibrate } from 'react-icons/bs';
+
 export const offersArray = [
   {
     image: 'https://ae01.alicdn.com/kf/H7026c7b0e94641b197a629356be07928y.jpg_220x220.webp_480x480Q90.webp',
@@ -34,5 +52,232 @@ export const offersArray = [
     image: 'https://ae01.alicdn.com/kf/Sb462e23c63664774ab37abfc0f3a29daT.jpg_220x220.webp_480x480Q90.webp',
     price: '198.2',
     discount: '5',
+  },
+];
+
+export const menuArray = [
+  {
+    name: "Women's Fashion",
+    icon: GiLargeDress,
+    link: '',
+    subMenu: [
+      {
+        name: '',
+        link: '',
+      },
+    ],
+    brands: [],
+    images: [],
+  },
+  {
+    name: "Men's Fashion",
+    icon: GiClothes,
+    link: '',
+    subMenu: [
+      {
+        name: '',
+        link: '',
+      },
+    ],
+    brands: [],
+    images: [],
+  },
+  {
+    name: 'Electronics',
+    icon: GiHeadphones,
+    link: '',
+    subMenu: [
+      {
+        name: '',
+        link: '',
+      },
+    ],
+    brands: [],
+    images: [],
+  },
+  {
+    name: 'Jewlery & Watches',
+    icon: GiWatch,
+    link: '',
+    subMenu: [
+      {
+        name: '',
+        link: '',
+      },
+    ],
+    brands: [],
+    images: [],
+  },
+  {
+    name: 'Home, Pet & Appliances',
+    icon: HiOutlineHome,
+    link: '',
+    subMenu: [
+      {
+        name: '',
+        link: '',
+      },
+    ],
+    brands: [],
+    images: [],
+  },
+  {
+    name: 'Beauty, Health & Hair',
+    icon: GiHealthCapsule,
+    link: '',
+    subMenu: [
+      {
+        name: '',
+        link: '',
+      },
+    ],
+    brands: [],
+    images: [],
+  },
+
+  {
+    name: 'Shoes,Sneakers,Heels',
+    icon: GiBallerinaShoes,
+    link: '',
+    subMenu: [
+      {
+        name: '',
+        link: '',
+      },
+    ],
+    brands: [],
+    images: [],
+  },
+
+  {
+    name: 'Accessories',
+    icon: GiBigDiamondRing,
+    link: '',
+    subMenu: [
+      {
+        name: '',
+        link: '',
+      },
+    ],
+    brands: [],
+    images: [],
+  },
+
+  {
+    name: 'Sports & Entertainment ',
+    icon: GiSportMedal,
+    link: '',
+    subMenu: [
+      {
+        name: '',
+        link: '',
+      },
+    ],
+    brands: [],
+    images: [],
+  },
+  {
+    name: 'Kids & Babies',
+    icon: FaBaby,
+    link: '',
+    subMenu: [
+      {
+        name: '',
+        link: '',
+      },
+    ],
+    brands: [],
+    images: [],
+  },
+  {
+    name: 'Movies & Television',
+    icon: BiCameraMovie,
+    link: '',
+    subMenu: [
+      {
+        name: '',
+        link: '',
+      },
+    ],
+    brands: [],
+    images: [],
+  },
+  {
+    name: 'Gaming, Video Games',
+    icon: MdOutlineSportsEsports,
+    link: '',
+    subMenu: [
+      {
+        name: '',
+        link: '',
+      },
+    ],
+    brands: [],
+    images: [],
+  },
+  {
+    name: 'Phones & Telecommunications',
+    icon: BsPhoneVibrate,
+    link: '',
+    subMenu: [
+      {
+        name: '',
+        link: '',
+      },
+    ],
+    brands: [],
+    images: [],
+  },
+  {
+    name: 'Toys & Hobbies',
+    icon: MdOutlineSmartToy,
+    link: '',
+    subMenu: [
+      {
+        name: '',
+        link: '',
+      },
+    ],
+    brands: [],
+    images: [],
+  },
+  {
+    name: 'Gifts & Crafts',
+    icon: BiGift,
+    link: '',
+    subMenu: [
+      {
+        name: '',
+        link: '',
+      },
+    ],
+    brands: [],
+    images: [],
+  },
+  {
+    name: 'Machinery',
+    icon: Gi3DHammer,
+    link: '',
+    subMenu: [
+      {
+        name: '',
+        link: '',
+      },
+    ],
+    brands: [],
+    images: [],
+  },
+  {
+    name: 'Security, Safety',
+    icon: AiOutlineSecurityScan,
+    link: '',
+    subMenu: [
+      {
+        name: '',
+        link: '',
+      },
+    ],
+    brands: [],
+    images: [],
   },
 ];
