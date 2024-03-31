@@ -1,3 +1,13 @@
 .mantine-TextInput-input:focus {
   border-color: #f8b090;
 }
+
+.mantine-Carousel-indicators button[data-active='true'] {
+  transition: all 0.3s ease !important;
+  width: 30px !important;
+}
+
+.mantine-Carousel-controls button svg {
+  width: 20px !important;
+  height: 20px !important;
+}
